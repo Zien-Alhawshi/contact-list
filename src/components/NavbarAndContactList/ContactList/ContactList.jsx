@@ -1,9 +1,30 @@
-// import React from 'react'
+import React, { useState, useEffect } from 'react';
 import './ContactList.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPen, faTrash, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 
+import ContactData from './ContactData';
 const ContactList = () => {
+  const [contacts, setContacts] = useState([])
+  useEffect(() => {
+    const fetchContacts = async () => {
+    const res = await fetch('https://contact-list-app-64308-default-rtdb.firebaseio.com/contact-list.json');
+    const data = await res.json();
+    console.log(data)
+    const contactData = [];
+    for (const key in data) {
+      contactData.push({
+        name:data[key].name,
+        surname:data[key].surname,
+        tel:data[key].tel,
+      })
+    }
+    setContacts(contactData)
+
+
+  }
+  fetchContacts();
+
+},[]);
+
   return (
     <div className='contact-list'>
       <table>
@@ -16,28 +37,8 @@ const ContactList = () => {
             <th><p>Actions</p></th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>
-              <div className='profile-img-box'>
-                {/* <i className='fa-solid fa-user'></i> */}
-                <FontAwesomeIcon className='fa-solid' icon={faUser} />
+       <ContactData contacts={contacts} />
 
-              </div>
-            </td>
-            <td><h2>John</h2></td>
-            <td><h2>Wan</h2></td>
-            <td><h2>3847281928</h2></td>
-            <td>
-              <div>
-               
-                <FontAwesomeIcon className='fa-solid' icon={faPen} />
-                <FontAwesomeIcon className='fa-solid'icon={faTrash} />
-                <FontAwesomeIcon className='fa-solid'icon={faHeart} />
-              </div>
-            </td>
-          </tr>
-        </tbody>
       </table>
     </div>
   )

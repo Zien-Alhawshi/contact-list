@@ -24,7 +24,24 @@ const contactSlice = createSlice({
       }).catch(error=>{
         console.log(error)
       })
-    }
+    },
+    deleteContact: (state, action) => {
+      const contactId = action.payload;
+  
+      // Fetch to delete the contact from the database
+      fetch(`https://contact-list-app-64308-default-rtdb.firebaseio.com/contact-list/${contactId}.json`, {
+          method: "DELETE",
+         
+      }
+    )
+
+      .catch(error => {
+          console.log(error);
+      });
+     
+  },
+
+
   }
 });
 
