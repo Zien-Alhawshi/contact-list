@@ -1,5 +1,4 @@
-import React from 'react'
-import Button from '../Ui/Button';
+import React from 'react';
 import './HorizontalNavbar.css';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,17 +8,12 @@ const HorizontalNavbar = () => {
     <div className='horizontal-nav'>
       <div className='profile'>
         <div className='profile-img-box'>
-          <FontAwesomeIcon className='fa-solid' icon={faUser} />
-
+          <FontAwesomeIcon className='fa-user-icon' icon={faUser} />
         </div>
         <h2>John Wan</h2>
       </div>
-      <form className='search-box'>
-        <input type='text' placeholder='John Wan' />
-        <Button name='Search' />
-      </form>
     </div>
-  )
+  );
 }
 
-export default HorizontalNavbar
+export default HorizontalNavbar;

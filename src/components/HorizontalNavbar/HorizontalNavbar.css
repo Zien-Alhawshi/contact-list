@@ -46,3 +46,33 @@
     font-size: 0.7rem;
     letter-spacing: 0.5px;
 }
+.horizontal-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #007bff;
+    margin-right: 10px;
+  }
+  
+  .fa-user-icon {
+    color: white;
+    font-size: 20px;
+  }
+  

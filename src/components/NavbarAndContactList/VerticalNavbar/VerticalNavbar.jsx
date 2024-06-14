@@ -3,10 +3,10 @@ import Form from './Form';
 import Navbar from './Navbar';
 import './VerticalNavbar.css';
 
-const VerticalNavbar = () => {
+const VerticalNavbar = ({fetchTrigger}) => {
   return (
     <div className='vertical-nav'>
-      <Navbar/>
+      <Navbar fetchTrigger={fetchTrigger} />
       <Form/>
     </div>
   )

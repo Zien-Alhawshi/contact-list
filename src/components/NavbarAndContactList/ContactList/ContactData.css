@@ -1,0 +1,78 @@
+/* Ensure that the input fields do not change the width of the cells */
+.input-edit {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Additional styling to maintain a consistent look */
+td h2 {
+    margin: 0;
+}
+
+td {
+    width: 150px; /* Set a fixed width for the table cells */
+    padding: 10px; /* Adjust padding as needed */
+    text-align: left;
+}
+
+/* Ensuring the profile icon stays the same size */
+.profile-img-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the icons container */
+td div {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Ensure that the input fields do not change the width of the cells */
+.input-edit {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Additional styling to maintain a consistent look */
+td h2 {
+    margin: 0;
+}
+
+td {
+    width: 150px; /* Set a fixed width for the table cells */
+    padding: 10px; /* Adjust padding as needed */
+    text-align: left;
+}
+
+/* Ensuring the profile icon stays the same size */
+.profile-img-box {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the icons container */
+td div {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the favorite icon */
+.favorite {
+    color: red; /* Change color to indicate favorite status */
+}
+
+.fa-user-icon {
+    color: white;
+    font-size: 20px;
+  }
